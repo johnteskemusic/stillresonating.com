@@ -1,0 +1,17 @@
+{
+  "name": "stillresonating.com",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "deploy": "SITE_BASE_URL=stillresonating.com npm run build && gh-pages -d _site",
+    "format": "prettier \"**/*.{css,js,json,html,md}\" --write"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/johnteskemusic/stillresonating.com#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "eleventy-lib": "git+https://github.com/johnteske/eleventy-lib.git#main",
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.1.1"
+  }
+}
