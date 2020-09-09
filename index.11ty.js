@@ -7,18 +7,22 @@ module.exports = (data) =>
 <html>
 <head>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    h1, p {
+      margin: 1rem 0;
+    }
     body {
       font-family: "Arial", sans-serif;
-      margin: 0;
-      padding: 1em;
+      padding: 1.5rem;
     }
     h1 {
       font-style: italic;
     }
     footer {
-      margin-top: 1em;
       border-top: 1px solid;
-      padding-top: 1em;
     }
   </style>
 </head>
@@ -37,9 +41,11 @@ module.exports = (data) =>
     </p>
   </main>
   <footer>
+    <p>
     ${withSerialComma(
       data.composers.map((c) => `<a href ="${c.website}">${c.name}</a>`)
     )}
+    </p>
   </footer>
 </body>
 </html>`;
