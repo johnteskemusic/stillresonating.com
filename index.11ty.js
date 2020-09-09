@@ -3,6 +3,14 @@ module.exports = (data) =>
 <html>
 <head>
   <style>
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 1em;
+    }
+    h1 {
+      font-style: italic;
+    }
     footer {
       margin-top: 1em;
       border-top: 1px solid;
@@ -15,7 +23,14 @@ module.exports = (data) =>
     <h1>still resonating</h1>
   </header>
   <main>
-    more to come soon
+    <p>
+      <em>still resonating</em> is a series of postcard works by composers ${data.composers
+        .map((_) => _.name)
+        .join(", ")}.
+    </p>
+    <p>
+      Please check back to view community contributions once you've recieved the first work in the mail.
+    </p>
   </main>
   <footer>
     ${data.composers
