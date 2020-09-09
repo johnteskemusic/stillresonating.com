@@ -1,3 +1,7 @@
+const and = (length) => (str, i) => (i === length - 1 ? `and ${str}` : str);
+
+const withSerialComma = (list) => list.map(and(list.length)).join(", ");
+
 module.exports = (data) =>
   `<!DOCTYPE html>
 <html>
@@ -24,18 +28,18 @@ module.exports = (data) =>
   </header>
   <main>
     <p>
-      <em>still resonating</em> is a series of postcard works by composers ${data.composers
-        .map((_) => _.name)
-        .join(", ")}.
+      <em>still resonating</em> is a series of postcard works by composers ${withSerialComma(
+        data.composers.map((c) => c.name)
+      )}.
     </p>
     <p>
       Please check back to view community contributions once you've recieved the first work in the mail.
     </p>
   </main>
   <footer>
-    ${data.composers
-      .map((_) => `<a href ="${_.website}">${_.name}</a>`)
-      .join(", ")}
+    ${withSerialComma(
+      data.composers.map((c) => `<a href ="${c.website}">${c.name}</a>`)
+    )}
   </footer>
 </body>
 </html>`;
