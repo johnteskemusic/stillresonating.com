@@ -36,7 +36,7 @@ module.exports = (data) =>
 </head>
 <body>
   <header>
-    <img src="http://img.srsly.online/stillresonating-web.jpg" title="still resonating" alt="still resonating" />
+    <img src="https://img.srsly.online/stillresonating-web.jpg" title="still resonating" alt="still resonating" />
   </header>
   <main>
     <p>
