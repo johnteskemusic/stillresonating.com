@@ -18,8 +18,16 @@ module.exports = (data) =>
       font-family: "Arial", sans-serif;
       padding: 1.5rem;
     }
-    h1 {
-      font-style: italic;
+    header {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      max-height: calc(100vh - 3rem);
+    }
+    main, footer {
+      margin: 0 auto;
+      max-width: 45rem;
     }
     footer {
       border-top: 1px solid;
@@ -28,7 +36,7 @@ module.exports = (data) =>
 </head>
 <body>
   <header>
-    <h1>still resonating</h1>
+    <img src="http://img.srsly.online/stillresonating-web.jpg" title="still resonating" alt="still resonating" />
   </header>
   <main>
     <p>
