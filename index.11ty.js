@@ -3,8 +3,8 @@ const and = (length) => (str, i) => (i === length - 1 ? `and ${str}` : str);
 const withSerialComma = (list) => list.map(and(list.length)).join(", ");
 
 module.exports = (data) =>
-  `<!DOCTYPE html>
-<html>
+`<!DOCTYPE html>
+<html lang="en">
 <head>
   <style>
     * {
@@ -33,6 +33,7 @@ module.exports = (data) =>
       border-top: 1px solid;
     }
   </style>
+  <title>still resonating | participatory postcard works</title>
 </head>
 <body>
   <header>
