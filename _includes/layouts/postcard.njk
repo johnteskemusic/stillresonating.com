@@ -1,0 +1,23 @@
+---
+templateEngineOverride: njk,md
+layout: layouts/default
+---
+<header>
+
+## [*still resonating*](/)
+
+</header>
+
+{#<nav>
+{% include 'postcard-links.njk' %}
+</nav>#}
+
+# {{ title }}
+
+{{ content | safe }}
+
+<footer>
+
+{% include 'about.njk'  %}
+
+</footer>
