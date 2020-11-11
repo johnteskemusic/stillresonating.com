@@ -1,22 +1,21 @@
 module.exports = function (config) {
   config.addPassthroughCopy("assets/*");
 
-  config.addShortcode("embed", embed);
-  config.addShortcode("videoEmbed", videoEmbed);
-
+  config.addShortcode("audio", audio);
   config.addShortcode("video", video);
 };
 
-function embed(url) {
-  return `<iframe src="${url}" width="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>`;
-}
-
-function videoEmbed(url) {
-  return `<div class="video">${embed(url)}</div>`;
-}
-
 function attribution(author, title) {
-  return `<h3>${author}${title != null ? ": " + title : ""}</h3>`
+  return title != null ? `<h4>${title}</h4>` : ""
+}
+
+function audio(url, author, title) {
+  return `${attribution(author, title)}
+<audio src="${url}"
+  controls>
+    <div class="fallback">Your browser doesn't support HTML5 audio. You can <a href="${url}" target="_blank">listen to or download</a> this file directly.</div>
+</audio>
+`
 }
 
 function video(url, author, title) {

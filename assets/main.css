@@ -24,18 +24,25 @@ main {
 h1,
 h2,
 h3,
+h4,
 p,
 li {
-  margin: 1rem 0;
+  margin: 1.1892em 0 0.8409em;
+  line-height: 1.4142;
 }
+
+/* tetratonic scale */
 h1 {
-  font-size: 1.666em;
+  font-size: 2em;
 }
 h2 {
-  font-size: 1.333em;
+  font-size: 1.6818em;
 }
 h3 {
-  font-size: 1.166em;
+  font-size: 1.4142em;
+}
+h4 {
+  font-size: 1.1892em;
 }
 ul {
   list-style: none;
