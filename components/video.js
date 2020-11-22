@@ -12,12 +12,14 @@ function html5(url, author, title) {
 
 function custom(url, author, title) {
   return `${attribution(author, title)}
-<div class="video sr-video">
-  <video src="${url}">
-    ${fallback(url)}
-  </video>
-</div>
-${controls(url)}`
+<div class="sr-video">
+  <div class="video">
+    <video src="${url}">
+      ${fallback(url)}
+    </video>
+  </div>
+  ${controls(url)}
+</div>`
 }
 
 function fallback(url) {
