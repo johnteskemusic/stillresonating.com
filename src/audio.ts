@@ -55,6 +55,7 @@ export default function audio() {
 
     function displayControls() {
       play.disabled = false;
+      pause.disabled = false;
       if (audio.duration > 0) {
         setTime();
       }
