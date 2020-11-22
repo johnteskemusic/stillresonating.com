@@ -51,6 +51,54 @@ img {
   max-width: 100%;
 }
 
+.sr-audio {
+  font-family: monospace;
+}
+.sr-audio .progress {
+  height: 1em;
+  border: 1px solid black;
+  margin-bottom: 1em;
+  position: relative;
+}
+.sr-audio .progress .bar {
+  position: absolute;
+  height: 100%;
+  width: 0; /* init */
+}
+.sr-audio .buffer-bar {
+  background: grey;
+}
+.sr-audio .progress-bar {
+  background: blue;
+}
+.sr-audio .controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sr-audio .status {
+  cursor: default;
+}
+.sr-audio button {
+  background: transparent;
+  border: 1px solid black;
+  padding: 0.5em;
+  font-family: monospace;
+}
+.sr-audio button:hover,
+.sr-audio button:focus {
+  cursor: pointer;
+  border-color: blue;
+  color: blue;
+}
+.sr-audio button:focus {
+  outline: 0;
+}
+.sr-audio button:disabled {
+  border-color: grey;
+  color: grey;
+}
+
 .video {
   position: relative;
   width: 100%;
