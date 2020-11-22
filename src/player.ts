@@ -83,4 +83,9 @@ export default function player(tag: "audio" | "video", el) {
     progressBar.style.width = formatPercent(media.currentTime / media.duration);
     setTime();
   });
+
+  media.addEventListener("ended", function () {
+    play.style.display = "block";
+    pause.style.display = "none";
+  });
 }
