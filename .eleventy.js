@@ -1,5 +1,6 @@
 module.exports = function (config) {
   config.addPassthroughCopy("assets/*");
+  config.addPassthroughCopy("favicon.ico");
 
   config.addShortcode("audio", audio);
   config.addShortcode("video", video);
