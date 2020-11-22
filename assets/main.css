@@ -98,6 +98,9 @@ img {
   border-color: grey;
   color: grey;
 }
+.sr-audio button.pause {
+  display: none;
+}
 
 .video {
   position: relative;

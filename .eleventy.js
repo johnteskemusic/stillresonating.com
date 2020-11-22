@@ -33,7 +33,7 @@ function audio2(url, author, title) {
 <div class="bar progress-bar"></div>
 </div>
 <div class="controls">
-<span class="status">loading</span>
+<span class="status">0:00 / -:--</span>
 <button class="play">play</button>
 <button class="pause">pause</button>
 <a href="${url}">download</a>
