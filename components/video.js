@@ -1,19 +1,19 @@
 const attribution = require("./attribution")
 const controls = require("./controls")
 
-function html5(url, author, title) {
+function html5(url, author, title, isAspect16_9=true) {
   return `${attribution(author, title)}
-<div class="video">
+<div class="video ${isAspect16_9 ? "aspect16_9" : ""}">
   <video src="${url}" controls>
     ${fallback(url)}
   </video>
 </div>`
 }
 
-function custom(url, author, title) {
+function custom(url, author, title, isAspect16_9=true) {
   return `${attribution(author, title)}
 <div class="sr-video">
-  <div class="video">
+  <div class="video ${isAspect16_9 ? "aspect16_9" : ""}">
     <video src="${url}">
       ${fallback(url)}
     </video>
