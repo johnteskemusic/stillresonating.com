@@ -55,7 +55,9 @@ export default function audio() {
 
     function displayControls() {
       play.disabled = false;
-      setTime();
+      if (audio.duration > 0) {
+        setTime();
+      }
     }
 
     // check that the media is ready before displaying the controls
