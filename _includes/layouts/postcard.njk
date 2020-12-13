@@ -1,23 +1,8 @@
 ---
 templateEngineOverride: njk,md
-layout: layouts/default
+layout: layouts/page
 ---
-<header>
 
-## [*still resonating*](/)
-
-</header>
-
-{#<nav>
-{% include 'postcard-links.njk' %}
-</nav>#}
-
-# {{ title }}
+![{{ title }} - postcard]({{ image }})
 
 {{ content | safe }}
-
-<footer>
-
-*still resonating* is {% include 'about.njk' %}.
-
-</footer>
