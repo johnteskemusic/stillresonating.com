@@ -9,7 +9,7 @@ templateEngineOverride: njk,md
   <img src="/assets/icon.png" height="48px" width="48px" style="align-self: flex-end"/>
   <h1><em>still resonating</em></h1>
 
-  {% include 'about.njk' %}
+{% include 'about.njk' %}
 
 </div>
 </header>
@@ -17,3 +17,9 @@ templateEngineOverride: njk,md
 ## postcards and responses
 
 {% include 'postcard-links.njk' %}
+
+<footer>
+
+{% include 'email.njk' %}
+
+</footer>
