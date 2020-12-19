@@ -31,7 +31,8 @@ h2,
 h3,
 h4,
 p,
-li {
+li,
+address {
   margin: 1.1892em 0 0.8409em;
   line-height: 1.4142;
 }
