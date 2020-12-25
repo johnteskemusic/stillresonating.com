@@ -110,13 +110,19 @@ img {
   display: none;
 }
 
-.constrain-16-9 {
+.constrain-aspect {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 */
   text-align: center;
 }
-.constrain-16-9 > * {
+.constrain-16-9 {
+  padding-bottom: 56.25%;
+}
+.constrain-278-135 {
+  padding-bottom: 48.56%;
+}
+.constrain-aspect > * {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,25 +1,30 @@
 const attribution = require("./attribution")
 const controls = require("./controls")
 
-function html5(url, author, title) {
+function html5(url, author, title, aspectRatio = "16:9") {
   return `${attribution(author, title)}
-<div class="video constrain-16-9">
+<div class="video constrain-aspect ${aspectRatioClass(aspectRatio)}">
   <video src="${url}" controls>
     ${fallback(url)}
   </video>
 </div>`
 }
 
-function custom(url, author, title) {
+function custom(url, author, title, aspectRatio = "16:9") {
   return `${attribution(author, title)}
 <div class="sr-video">
-  <div class="video constrain-16-9">
+  <div class="video constrain-aspect ${aspectRatioClass(aspectRatio)}">
     <video src="${url}">
       ${fallback(url)}
     </video>
   </div>
   ${controls(url)}
 </div>`
+}
+  
+function aspectRatioClass(ratio) {
+  const kebab = ratio.replace(":", "-")
+  return `constrain-${kebab}`
 }
 
 function fallback(url) {
