@@ -19,7 +19,7 @@ function custom(url, author, title) {
 }
 
 function fallback(url) {
-  return `<div class="fallback">Your browser doesn't support HTML5 audio. You can <a href="${url}" target="_blank">listen to or download</a> this file directly.</div>`
+  return `<div class="fallback">Your browser doesn't support HTML5 audio. You can <a href="${url}" target="_blank" rel="noopener">listen to or download</a> this file directly.</div>`
 }
 
 module.exports = {

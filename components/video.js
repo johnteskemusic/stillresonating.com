@@ -28,7 +28,7 @@ function aspectRatioClass(ratio) {
 }
 
 function fallback(url) {
-  return `<div class="fallback">Your browser doesn't support HTML5 video. You can <a href="${url}" target="_blank">view or download</a> this video directly.</div>`
+  return `<div class="fallback">Your browser doesn't support HTML5 video. You can <a href="${url}" target="_blank" rel="noopener">view or download</a> this video directly.</div>`
 }
 
 module.exports = {
