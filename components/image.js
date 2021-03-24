@@ -1,10 +1,11 @@
+const features = require("../_data/features")
 const attribution = require("./attribution")
 
 module.exports = function(url, author, title) {
   return `${attribution(author, title)}
 <div class="constrain-aspect">
   <img
-    data-src="${url}"
+    src="${url}"
     loading="lazy"
     alt="'${title}' by ${author}"
   />
