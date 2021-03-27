@@ -3,8 +3,10 @@ templateEngineOverride: njk,md
 layout: layouts/page
 ---
 
+{% set alt = 'postcard ' + title %}
+
 <div style="--aspect-ratio: 3/2">
-  <img src="{{ image }}" alt="postcard {{ title }}" />
+  {% img image, alt %}
 </div>
 
 {{ content | safe }}

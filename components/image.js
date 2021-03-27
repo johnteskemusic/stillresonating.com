@@ -1,4 +1,3 @@
-const features = require("../_data/features")
 const attribution = require("./attribution")
 
 module.exports = function(url, author, title) {
