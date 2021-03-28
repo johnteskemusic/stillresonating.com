@@ -5,8 +5,6 @@ layout: layouts/page
 
 {% set alt = 'postcard ' + title %}
 
-<div style="--aspect-ratio: 3/2">
-  {% img image, alt %}
-</div>
+{% img image, alt, "3/2" %}
 
 {{ content | safe }}
