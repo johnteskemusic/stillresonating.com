@@ -17,7 +17,7 @@ main {
 
 .index #splash {
   margin-bottom: 2.38em;
-  text-align: center; /* TODO should this be part of the aspect ratio styling? */
+  text-align: center;
 }
 .index #splash-card {
   border: 1px solid black;

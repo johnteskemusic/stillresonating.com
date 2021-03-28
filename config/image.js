@@ -17,8 +17,10 @@ function plugin(config) {
 }
 
 async function shortcode(src, alt, aspectRatio = "16/9") {
-  if (aspectRatio.split("/").length !== 2) {
-    // TODO also check each of these are numbers
+  if (
+    aspectRatio.split("/").length !== 2 ||
+    aspectRatio.split("/").some((_) => isNaN(_))
+  ) {
     throw new Error("invalid aspect ratio");
   }
 
@@ -36,7 +38,7 @@ async function shortcode(src, alt, aspectRatio = "16/9") {
     sizes: "45rem", // max-width of <main> is 45rem
     loading: "lazy",
     decoding: "async",
-    class: "traget"
+    class: "traget",
   });
 
   return `<div style="--aspect-ratio: ${aspectRatio}">
