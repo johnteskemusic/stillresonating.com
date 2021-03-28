@@ -23,8 +23,8 @@ async function shortcode(src, alt, aspectRatio = "16/9") {
   }
 
   let options = {
-    formats: [/*"webp",*/ null], // TODO webp format and also original // TODO also allow webp, which require CSS changes to support <picture>
-    widths: [720, 1440], // 1x, 2x
+    formats: ["webp", null],
+    widths: [720, 1440],
     outputDir: `./${IMG_DIR}/`,
     urlPath: URL_PATH,
   };
@@ -36,6 +36,7 @@ async function shortcode(src, alt, aspectRatio = "16/9") {
     sizes: "45rem", // max-width of <main> is 45rem
     loading: "lazy",
     decoding: "async",
+    class: "traget"
   });
 
   return `<div style="--aspect-ratio: ${aspectRatio}">

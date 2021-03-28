@@ -3,9 +3,7 @@
 <li>
   <a href="{{ item.url }}">
     <h3>{{ item.data.title }}</h3>
-    <div style="--aspect-ratio: 3/2">
-      {% img item.data.image, item.data.title %}
-    </div>
+    {% img item.data.image, item.data.title, "3/2" %}
   </a>
 </li>
 {% endfor %}
