@@ -1,4 +1,7 @@
-/* TODO this needs a fallback */
+img {
+  max-width: 100%;
+}
+
 @supports (--custom: property) {
   [style*="--aspect-ratio"] {
     display: block;
@@ -7,8 +10,7 @@
     padding-top: calc(100% / (var(--aspect-ratio)));
   }
 
-  [style*="--aspect-ratio"] .traget {
-  /*[style*="--aspect-ratio"] > :first-child {*/
+  [style*="--aspect-ratio"] .aspect-ratio-target {
     position: absolute;
     height: 100%;
     width: auto;
