@@ -8,7 +8,9 @@ export default {
     file: "_site/assets/bundle.js",
     format: "cjs",
   },
-
+  watch: {
+    clearScreen: false
+  },
   plugins: [
     typescript(),
     process.env.SITE_ENV === "production" ? terser() : null,

@@ -2,7 +2,7 @@
   "name": "stillresonating.com",
   "scripts": {
     "build": "rollup -c rollup.config.js && eleventy",
-    "serve": "eleventy --serve & rollup -c rollup.config.js --watch --no-watch.clearScreen; wait",
+    "serve": "eleventy --serve & rollup -c rollup.config.js -w ; wait",
     "deploy": "GIT_SHORT_HASH=$(git rev-parse --short=8 HEAD) SITE_ENV=production SITE_BASE_URL=stillresonating.com npm run build && gh-pages -d _site",
     "lint": "eslint assets",
     "format": "prettier \"**/*.{css,js,ts,json,html,md}\" --write"
