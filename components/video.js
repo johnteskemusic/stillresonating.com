@@ -1,5 +1,5 @@
-const attribution = require("./attribution")
-const controls = require("./controls")
+const attribution = require("./attribution");
+const controls = require("./controls");
 
 function html5(url, author, title, aspectRatio = "16:9") {
   return `${attribution(author, title)}
@@ -7,7 +7,7 @@ function html5(url, author, title, aspectRatio = "16:9") {
   <video src="${url}" controls>
     ${fallback(url)}
   </video>
-</div>`
+</div>`;
 }
 
 function custom(url, author, title, aspectRatio = "16:9") {
@@ -19,19 +19,19 @@ function custom(url, author, title, aspectRatio = "16:9") {
     </video>
   </div>
   ${controls(url)}
-</div>`
+</div>`;
 }
-  
+
 function aspectRatioClass(ratio) {
-  const kebab = ratio.replace(":", "-")
-  return `constrain-${kebab}`
+  const kebab = ratio.replace(":", "-");
+  return `constrain-${kebab}`;
 }
 
 function fallback(url) {
-  return `<div class="fallback">Your browser doesn't support HTML5 video. You can <a href="${url}" target="_blank" rel="noopener">view or download</a> this video directly.</div>`
+  return `<div class="fallback">Your browser doesn't support HTML5 video. You can <a href="${url}" target="_blank" rel="noopener">view or download</a> this video directly.</div>`;
 }
 
 module.exports = {
   html5,
-  custom
-}
+  custom,
+};

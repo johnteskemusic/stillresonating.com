@@ -10,5 +10,5 @@ module.exports = function controls(url) {
     <button class="pause" disabled>pause</button>
     <a href="${url}">download</a>
   </div>
-</div>`
-}
+</div>`;
+};
