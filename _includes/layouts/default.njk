@@ -7,13 +7,13 @@ templateEngineOverride: njk,md
   <title>still resonating | participatory postcard works</title>
   <meta name="description" content="{{ description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/main.css?v={{git.shorthash}}">
+  <link rel="stylesheet" href="/assets/bundle.css?v={{git.shorthash}}">
   <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body class="{{ title }}">
   <main>
     {{ content | safe }}
   </main>
-  <script src="/assets/main.js"></script>
+  <script src="/assets/bundle.js"></script>
 </body>
 </html>
