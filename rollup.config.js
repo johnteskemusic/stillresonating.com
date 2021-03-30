@@ -1,5 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
-import css from "rollup-plugin-css-only";
+import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 
 export default {
@@ -9,11 +9,11 @@ export default {
     format: "cjs",
   },
   watch: {
-    clearScreen: false
+    clearScreen: false,
   },
   plugins: [
     typescript(),
     process.env.SITE_ENV === "production" ? terser() : null,
-    css({ output: "bundle.css" }),
+    postcss({ extract: true, minimize: process.env.SITE_ENV === "production" }),
   ],
 };
