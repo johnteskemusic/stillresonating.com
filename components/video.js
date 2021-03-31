@@ -4,7 +4,7 @@ const controls = require("./controls");
 function html5(url, author, title, aspectRatio = "16:9") {
   return `${attribution(author, title)}
 <div class="video constrain-aspect ${aspectRatioClass(aspectRatio)}">
-  <video src="${url}" controls>
+  <video src="${url}" controls preload="metadata">
     ${fallback(url)}
   </video>
 </div>`;
@@ -14,7 +14,7 @@ function custom(url, author, title, aspectRatio = "16:9") {
   return `${attribution(author, title)}
 <div class="sr-video">
   <div class="video constrain-aspect ${aspectRatioClass(aspectRatio)}">
-    <video src="${url}">
+    <video src="${url}" preload="metadata">
       ${fallback(url)}
     </video>
   </div>

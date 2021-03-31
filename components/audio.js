@@ -3,7 +3,7 @@ const controls = require("./controls");
 
 function html5(url, author, title) {
   return `${attribution(author, title)}
-<audio src="${url}" controls>
+<audio src="${url}" controls preload="metadata">
   ${fallback(url)}
 </audio>`;
 }
@@ -11,7 +11,7 @@ function html5(url, author, title) {
 function custom(url, author, title) {
   return `${attribution(author, title)}
 <div class="sr-audio">
-  <audio src="${url}">
+  <audio src="${url}" preload="metadata">
     ${fallback(url)}
   </audio>
   ${controls(url)}
