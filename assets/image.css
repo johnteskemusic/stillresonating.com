@@ -10,6 +10,7 @@ img {
     padding-top: calc(100% / (var(--aspect-ratio)));
   }
 
+  [style*="--aspect-ratio"] img,
   [style*="--aspect-ratio"] .aspect-ratio-target {
     position: absolute;
     height: 100%;
