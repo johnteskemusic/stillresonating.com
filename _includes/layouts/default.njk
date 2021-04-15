@@ -15,6 +15,6 @@ templateEngineOverride: njk,md
   <main>
     {{ content | safe }}
   </main>
-  <script src="/assets/main.js"></script>
+  <script src="/assets/bundle.js?v={{git.shorthash}}" async></script>
 </body>
 </html>
