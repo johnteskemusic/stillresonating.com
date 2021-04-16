@@ -3,6 +3,8 @@ templateEngineOverride: njk,md
 layout: layouts/page
 ---
 
-<img src="{{ image }}" alt="postcard {{ title }}" />
+{% set alt = 'postcard ' + title %}
+
+{% img image, alt, "3/2" %}
 
 {{ content | safe }}

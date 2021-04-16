@@ -1,7 +1,6 @@
 ---
 title: kitchen sink
 layout: layouts/page
-#image: https://archive.org/download/still-resonating-1-postcard/one.png
 templateEngineOverride: njk,md
 ---
 
@@ -16,3 +15,17 @@ templateEngineOverride: njk,md
 ### h3 video, other
 
 {% video "https://archive.org/download/still-resonating-1-video/Nat%20Evans.mp4", "Nat Evans", "" %}
+
+## h2
+
+{% set testImage="https://archive.org/download/still-resonating-1-image/Esther%20Sugai%20-%200%20-%20Laundry.jpeg" %}
+
+### `--aspect-ratio`
+<div style="--aspect-ratio: 3/2">
+  <img src="{{ testImage }}" class="aspect-ratio-target" />
+</div>
+
+### `--aspect-ratio fallback`
+<div>
+  <img src="{{ testImage }}" />
+</div>
