@@ -38,7 +38,7 @@ async function shortcode(src, alt, aspectRatio = "16/9") {
     sizes: "45rem", // max-width of <main> is 45rem
     loading: "lazy",
     decoding: "async",
-    class: "traget",
+    class: "aspect-ratio-target",
   });
 
   return `<div style="--aspect-ratio: ${aspectRatio}">
